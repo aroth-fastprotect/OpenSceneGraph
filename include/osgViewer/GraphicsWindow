@@ -279,7 +279,7 @@ struct GraphicsWindowFunctionProxy
 };
 
 #define USE_GRAPICSWINDOW_IMPLEMENTATION(ext) \
-    extern "C" void graphicswindow_##ext(void); \
+    extern "C" OSGVIEWER_EXPORT void graphicswindow_##ext(void); \
     static osgViewer::GraphicsWindowFunctionProxy graphicswindowproxy_##ext(graphicswindow_##ext);
 
 #if defined(_WIN32)
